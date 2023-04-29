@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- HEAD -->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Google Console Verification -->
+    <meta name="google-site-verification" content="Ypc_O50xyYcRsv6t5OlfQYcCYE6oPsvqoFYubJ__8UY" />
+
+    <!-- Default Settings -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <meta name="keywords" content="alexlostorto, Alex, Alex lo Storto, Alex Lo Storto, Photography Portfolio, portfolio, portfolio website, Portfolio Website, Photography, photographer, programmer, coder, web developer, open source, space-themed, space" />
+    <meta name="description" content="Personal portfolio displaying my photography/web development skills." />
+    <meta name="author" content="Alex lo Storto" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../assets/css/universal.css" />
+    <link rel="stylesheet" href="resource.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+
+    <!-- Javascript -->
+    <script src="../../assets/js/component.js" defer></script>
+    <script src="../../assets/js/universal.js" defer></script>
+    <script src="app.js" defer></script>
+    <title>Alex lo Storto</title>
+  </head>
+
+  <!-- BODY -->
+  <body>
+    <div class="body-container">
+      <!-- Navbar  -->
+      <app-navbar></app-navbar>
+
+      <!-- Header -->
+      <header><span class="gradient-header">Insta Size</span></header>
+
+      <!-- Description -->
+      <div id="about" class="text-container">
+        <p class="description">This <span class="orange-text">program</span> was created to <span class="orange-text">split</span> pictures into <span class="orange-text">squares</span> so that they fit Instagram's post format.</p>
+      </div>
+      <div id="about" class="text-container">
+        <p class="description"><span class="orange-text">Warning</span>: Download feature only works if there is 1 <span class="orange-text">row</span> and 1 <span class="orange-text">column</span>.</p>
+      </div>
+
+      <!-- Program -->
+      <div class="program-container">
+        <!-- Grid Parameters -->
+        <div class="sub-header">
+          <h2>Grid Settings</h2>
+        </div>
+        <div class="inputs">
+          <div>
+            <label for="columns">Rows</label>
+            <input placeholder="0" id="columns" type="number" />
+          </div>
+          <div>
+            <label for="rows">Columns</label>
+            <input placeholder="0" id="rows" type="number" />
+          </div>
+        </div>
+        <div class="inputs">
+          <div>
+            <label for="columns">Offset X</label>
+            <input id="offset-x" type="range" class="range-style" />
+          </div>
+          <div>
+            <label for="columns">Offset Y</label>
+            <input id="offset-y" type="range" class="range-style" />
+          </div>
+        </div>
+        <button id="download" class="download-button">Download</button>
+
+        <!-- Uploaded Image -->
+        <div class="uploaded-image">
+          <div class="grid-container">
+            <img crossorigin="anonymous" id="inner-source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="1000" height="227" />
+          </div>
+          <img crossorigin="anonymous" id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="1000" height="227" />
+        </div>
+
+        <!-- Upload File Button -->
+        <input type="file" id="upload" hidden />
+        <label id="upload-label" for="upload">Choose File</label>
+        <span id="file-chosen">No file chosen</span>
+      </div>
+
+      <!-- Footer  -->
+      <app-footer></app-footer>
+    </div>
+
+    <!-- Custom cursor  -->
+    <div class="custom-cursor">
+      <div id="cursor" class="custom-cursor inner"></div>
+      <div class="custom-cursor outer"></div>
+    </div>
+  </body>
+</html>
